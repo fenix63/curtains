@@ -22,12 +22,21 @@
               fontRatio : 13
           });
           
+          $('.get_designer, .get_callback').flowtype({
+              minFont   : 18,
+              maxFont   : 20,
+              fontRatio : 20
+          });
       
           if($(window).width() <= '768')
-              {
-                  $('header .main_text').css({'margin-top':'70px'});
-                  $('header .blinds').css({'margin-top':'-80px'});
-              }
+          {
+              $('header .main_text').css({'margin-top':'70px'});
+              $('header .blinds').css({'margin-top':'-80px'});
+              $('.buttons .get_designer, .buttons .get_callback').css({
+                  'width':'100%',
+                  'margin-top':'20px'
+              });
+          }
       
           if($(window).width() > '768')
           {
@@ -35,18 +44,31 @@
               $('header .blinds').css({'margin-top':'inherit'});
           }
       
+          //- if($(window).width() >= '991')
+          //-     $('header button').css({'padding':'23px 47px 18px 45px'});
+      
+      
       
           $(window).resize(function(){
+      
               if($(window).width() <= '768')
               {
                   $('header .main_text').css({'margin-top':'70px'});
                   $('header .blinds').css({'margin-top':'-80px'});
+                  $('.buttons .get_designer, .buttons .get_callback').css({
+                      
+                      'margin-top':'20px'
+                  });
               }
       
               if($(window).width() > '768')
               {
                   $('header .main_text').css({'margin-top':'150px'});
                   $('header .blinds').css({'margin-top':'inherit'});
+                  $('.buttons .get_designer, .buttons .get_callback').css({
+                      
+                      'margin-top':'127px'
+                  });
               }
           });
           
@@ -84,6 +106,51 @@
       <div class="row">
         <div class="col-lg-3 col-lg-offset-8 col-md-4 col-md-offset-8 col-sm-5 col-sm-offset-7 col-xs-5 col-xs-offset-7 blinds">Пошив и продажа штор</div>
       </div>
+      <div class="row buttons">
+        <div class="col-lg-3 col-lg-offset-3 col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-0 col-xs-12">
+          <button class="btn btn-danger  get_designer">Вызвать дизайнера</button>
+        </div>
+        <div class="col-lg-3 col-lg-offset-0 col-md-4 col-md-offset-1 col-sm-5 col-sm-offset-2 col-xs-12">
+          <button class="btn btn-default  get_callback">Заказать звонок</button>
+        </div>
+        <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-2 hidden-sm hidden-xs icon"><img src="images/phone_icon.png" alt=""/><img src="images/phone-simple_icon.png" alt=""/><img src="images/ar.png" alt=""/><img src="images/telegram_icon.png" alt=""/></div>
+      </div>
+      <div class="row arrow_down">
+        <div class="col-lg-2 col-lg-offset-5 col-md-1 col-md-offset-6"><img src="images/arrow-down.png" alt=""/></div>
+      </div>
     </div>
   </header>
+  <div class="filter">
+    <div class="top_filter">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="col-lg-12">
+            <ul class="nav nav-justified inline">
+              <li><img src="images/all-icon.png" alt=""/>
+                <div>Все</div>
+              </li>
+              <li><img src="images/kitchen-icon2.png" alt=""/>
+                <div>Для кухни</div>
+              </li>
+              <li><img src="images/living-room-icon.png" alt=""/>
+                <div>Для гостинной</div>
+              </li>
+              <li><img src="images/bedroom-icon2.png" alt=""/>
+                <div>Для спальни</div>
+              </li>
+              <li><img src="images/nerdary-icon.png" alt=""/>
+                <div>Для детской</div>
+              </li>
+              <li><img src="images/house-icon.png" alt=""/>
+                <div>Для дома</div>
+              </li>
+              <li><img src="images/sales-icon.png" alt=""/>
+                <div>Скидки</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

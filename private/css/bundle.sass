@@ -16,9 +16,9 @@ header
     background-color: rgba(0,0 , 0, 0.5);
     background-image: url(../images/bg.png)
     background-repeat: no-repeat
+    -ms-background-position-x: center
+    background-position-x: center
     
-    -webkit-background-size: 100%
-    background-size: 100%
 
     .contacts
         margin-top: 48px
@@ -66,14 +66,26 @@ header
         
 
     .get_designer, .get_callback
-        width: 280px
-        height: 60px
-    .buttons
+        width: 100%
         margin-top: 127px
+    .buttons
+        height: 218px
+
+        .icon
+            padding-right: 0
+        img
+            float: right
+            padding: 0
+            clear: both
+            margin-top: 25px
+
+
+        
 
         .get_callback
             background-color: transparent
             border: 2px solid #fff
+            padding: 22px 46px 17px 44px
             color: #fff
             &:hover, &:focus, &:active
                 color: #fff
@@ -85,7 +97,7 @@ header
             border-radius: 2px
             background-image: none
             background-color: #fc8080
-
+            padding: 23px 47px 18px 45px
 
             
             color: #fff
@@ -96,8 +108,13 @@ header
 
 
             &:hover, &:focus, &:active
-                background-color: #fc8080 !important        
+                background-color: #fc8080 !important
+    .arrow_down
+        text-align: center
+        margin-top: 105px
 
+        &:hover
+            cursor: pointer
 
 
 .container,.icons
@@ -122,3 +139,42 @@ header
 
     .icons
         margin-top: 55px
+
+.filter
+    height: 197px
+    .top_filter
+        margin-top: 20px
+        padding-bottom: 20px
+        border-bottom: 2px solid #b3b3b3
+        div
+            &:first-child
+                border-left: 0px solid #b3b3b3 !important
+            
+
+        div[class*="col-"]
+            padding-left: 57px
+            padding-right: 57px
+            border-left: 2px solid #b3b3b3
+        img
+            display: block
+            margin-left: auto
+            margin-right: auto
+        ul
+            li
+                display: table-cell
+                border-left: 2px solid #b3b3b3
+                &:first-child
+                    border-left: 0px solid #b3b3b3
+                div
+                    clear: both
+                    text-align: center
+                    margin-top: 7px
+                    font-family: Helvetica-Neue-Cyr
+                    font-size: 14px
+    .desc
+        color: #ef9a9a
+        font-family: "Helvetica-Neue-Cyr"
+        font-size: 14px
+        font-weight: 500
+        line-height: 30px
+
